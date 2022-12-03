@@ -60,7 +60,7 @@ body
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   /* background-color: var(--darkTextBack); */
   /* Top/bottom, left/right */
@@ -106,13 +106,21 @@ p
     justify-content: center;
     width: 100%;
     display: flex;
-    padding: 0;
+    padding: 10px;
+  }
+
+  #navBar
+  {
+    /* width: 80%; */
+    justify-content: center;
+    align-items: center;
   }
 
   #navBar a
   {
-    margin: 10px auto;
-    padding: 0%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
   }
 
   body
