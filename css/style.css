@@ -197,37 +197,52 @@ p
 #project-2
 {
   grid-area: project-2;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/02-portfolio-2.jpg");
 }
 
 #project-3
 {
   grid-area: project-3;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/02-portfolio-3.jpg");
 }
 
 #project-4
 {
   grid-area: project-4;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/02-portfolio-4.jpg");
 }
 
 #project-5
 {
   grid-area: project-5;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/02-run-buddy.jpg");
 }
 
 .workGridArea
 {
   border: 5px solid black;
+  transition: transform .2s;
+  /* Animation */
 }
 
+.workGridArea:hover
+{
+  transform: scale(1.1);
+}
+
+.content-container.footer
+{
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Follow page spacing */
+  justify-content: space-between;
+}
 
 /* Media queries */
 @media only screen and (max-width: 979px)
-
-/* Larger phone screens */
 {
   .navContainer
   {
@@ -268,6 +283,11 @@ p
   body
   {
     background-color: lightblue;
+  }
+
+  .a
+  {
+    font-size: 56px;
   }
 
 }
