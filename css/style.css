@@ -5,6 +5,7 @@
 
 :root
 {
+  /* TODO: Change for IE support */
   /* Dark Theme */
   --darkNavBar: #121212;
   --darkTextBack: #323232;
@@ -47,8 +48,10 @@ body
 {
   display: flex;
   flex-direction: row;
+  /* TODO: Change to match positioning of grid/main elements */
   width: 100%;
   justify-content: flex-end;
+  padding: 0
 }
 
 #navBar a
@@ -98,7 +101,6 @@ p
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-
 }
 
 .banner-text
@@ -114,10 +116,10 @@ p
 {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
   padding: 10px;
   justify-content: center;
-  width: 90%;
+  width: 100%;
+  margin: 5rem 0rem;
 }
 
 .page-section h2
@@ -125,15 +127,16 @@ p
 
   border-right: solid black 5px;
   text-align: right;
-  padding: 3rem;
-  width: 300px;
-
+  display: flex;
+  justify-content: flex-end;
+  padding: 3rem 3rem;
+  width: 200px;
 }
 
-.text-container
+.content-container
 {
 
-  margin: 0rem 5rem;
+  margin: 0rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,8 +145,84 @@ p
 
 .page-wrapper
 {
-  margin: 5rem;
+  margin: 3rem;
 }
+
+#workGrid
+{
+
+  display: grid;
+
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "feature feature"
+    "project-2 project-3"
+    "project-4 project-5"
+  ;
+}
+
+.workGridArea
+{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  width: fit-content;
+  /* border-bottom: 5px solid rgba(36, 205, 45, .7); */
+}
+
+
+#feature
+{
+  grid-area: feature;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#project-2
+{
+  grid-area: project-2;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#project-3
+{
+  grid-area: project-3;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#project-4
+{
+  grid-area: project-4;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#project-5
+{
+  grid-area: project-5;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+.workGridArea
+{
+  border: 5px solid black;
+}
+
 
 /* Media queries */
 @media only screen and (max-width: 979px)
