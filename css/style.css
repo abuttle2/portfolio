@@ -8,6 +8,7 @@
   /* Dark Theme */
   --darkNavBar: #121212;
   --darkTextBack: #323232;
+  --standardMargin: 30px;
 }
 
 body
@@ -27,8 +28,6 @@ body
   align-items: center;
   /* Top/bottom, left/right */
   padding: 10px 0px;
-
-  /* For mobile view change the flex-direction to column  */
 }
 
 .navContainer h1
@@ -48,27 +47,22 @@ body
 {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  /* Vertical positioning */
+  width: 100%;
   justify-content: flex-end;
-  /* could use alternative */
-  margin: 0;
 }
 
 #navBar a
 {
   display: flex;
-  flex-wrap: wrap;
-  position: relative;
   font-size: 18px;
   color: white;
   /* background-color: var(--darkTextBack); */
-  /* Top/bottom, left/right */
-  padding: 0px 3%;
+  margin: 0% var(--standardMargin);
+  padding: 0px 10px;
   text-decoration: none;
   /* border: solid white 1px; */
-  margin: 10px;
   border-bottom: solid white 2px;
+  text-align: center;
 }
 
 h1,
@@ -79,25 +73,87 @@ h5,
 h6
 {
   margin: 0;
+  font-size: 42px;
 }
 
 p
 {
   margin: 0;
+  padding: 10px;
 }
 
+.hero-banner
+{
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 30vh;
+  /* border-top: solid rgba(0, 0, 0, 0.579) 5px; */
+  /* Tint Image */
+  background-color: rgba(36, 205, 45, 0.411);
+  background-blend-mode: multiply;
+
+  /* Layout */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+}
+
+.banner-text
+{
+  color: white;
+  background-color: var(--darkTextBack);
+  padding: 15px;
+  margin: var(--standardMargin) var(--standardMargin);
+
+}
+
+.page-section
+{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10px;
+  justify-content: center;
+  width: 90%;
+}
+
+.page-section h2
+{
+
+  border-right: solid black 5px;
+  text-align: right;
+  padding: 3rem;
+  width: 300px;
+
+}
+
+.text-container
+{
+
+  margin: 0rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.page-wrapper
+{
+  margin: 5rem;
+}
 
 /* Media queries */
 @media only screen and (max-width: 979px)
 
 /* Larger phone screens */
 {
-
   .navContainer
   {
     flex-direction: column;
     padding: 0px;
-    margin: 0;
   }
 
   .navContainer h1
@@ -111,20 +167,28 @@ p
 
   #navBar
   {
-    /* width: 80%; */
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    padding: 10px;
   }
 
   #navBar a
   {
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+    margin: 5px;
+  }
+
+  .hero-banner
+  {
+    justify-content: center;
+
   }
 
   body
   {
     background-color: lightblue;
   }
+
 }
