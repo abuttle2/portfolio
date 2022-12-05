@@ -5,12 +5,14 @@
 
 :root
 {
-  /* TODO: Change for IE support */
-  /* TODO: Tidy magic numbers for styling */
-  /* Dark Theme */
+  /* Setting consistent values for certain elements */
   --darkNavBar: #121212;
   --darkTextBack: #323232;
-  --standardMargin: 30px;
+  --standardMargin: 20px;
+  --standardPadding: 20px;
+  --borderSize: 5px;
+  --borderLinkSize: 2px;
+
 }
 
 body
@@ -27,10 +29,8 @@ body
   display: flex;
   flex-direction: row;
   background-color: var(--darkNavBar);
-  /* Vertical positioning of all container elements*/
   align-items: center;
-  /* Top/bottom, left/right */
-  padding: 10px 0px;
+  padding: var(--standardPadding) 0px;
 }
 
 .navContainer h1
@@ -38,7 +38,7 @@ body
   color: white;
   font-size: 36px;
   display: flex;
-  padding: 0px 15px;
+  padding: 0 var(--standardPadding);
   justify-content: flex-end;
   background-color: var(--darkTextBack);
   /* Fixed  */
@@ -52,20 +52,18 @@ body
   /* TODO: Change to match positioning of grid/main elements */
   width: 100%;
   justify-content: flex-end;
-  padding: 0;
 }
 
 #navBar a
 {
+  text-decoration: none;
   display: flex;
   font-size: 18px;
   color: white;
   /* background-color: var(--darkTextBack); */
-  margin: 0% var(--standardMargin);
-  padding: 0px 10px;
-  text-decoration: none;
-  /* border: solid white 1px; */
-  border-bottom: solid white 2px;
+  margin: 0 var(--standardMargin);
+  padding: 0 var(--standardPadding);
+  border-bottom: solid white var(--borderLinkSize);
   text-align: center;
 }
 
@@ -82,8 +80,7 @@ h6
 
 p
 {
-  margin: 0;
-  padding: 10px;
+  padding: var(--standardPadding);
 }
 
 .hero-banner
@@ -109,26 +106,28 @@ p
   /* TODO Improve how this scales */
   color: white;
   background-color: var(--darkTextBack);
-  padding: 15px;
-  margin: var(--standardMargin) var(--standardMargin);
+  padding: var(--standardPadding);
+  margin: var(--standardMargin);
 }
 
 .page-section
 {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: var(--standardPadding);
   justify-content: center;
+
   width: 100%;
   margin: 5rem 0rem;
 }
 
 .page-section h2
 {
-  border-right: solid black 5px;
+  border-right: solid black var(--borderSize);
   text-align: right;
   display: flex;
   justify-content: flex-end;
+
   padding: 3rem 3rem;
   width: 200px;
 }
@@ -140,10 +139,11 @@ nav a:hover
 
 .content-container
 {
-  margin: 0rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  margin: 0rem 3rem;
   width: 60%;
 }
 
@@ -175,10 +175,8 @@ nav a:hover
   display: grid;
   align-content: end;
 
-  border: 5px solid black;
+  border: solid black var(--borderSize);
   transition: transform 0.2s;
-  /* Animation */
-
   border-radius: 10px;
 }
 
@@ -194,9 +192,9 @@ nav a:hover
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--standardMargin);
   background-color: black;
-  padding: 10px;
+  padding: var(--standardPadding);
   color: white;
   font-size: 18px;
   width: fit-content;
@@ -241,6 +239,7 @@ nav a:hover
   /* Follow page spacing */
   justify-content: space-evenly;
   flex-wrap: wrap;
+
 }
 
 .content-container.footer a
@@ -260,14 +259,14 @@ nav a:hover
 
 .content-container img
 {
+  /* Centered picture */
   width: 200px;
   height: 200px;
-  margin: 0 auto;
 }
 
 .photo
 {
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 /* Media queries */
@@ -285,7 +284,7 @@ nav a:hover
     justify-content: center;
     width: 100%;
     display: flex;
-    padding: 10px;
+    padding: var(--standardPadding);
   }
 
   #navBar
@@ -308,18 +307,7 @@ nav a:hover
     justify-content: center;
   }
 
-  .banner-text h2
-  {
-    /* Reduce size of welcome text for smaller devices */
-    font-size: 24px;
-  }
-
-  .a
-  {
-    font-size: 56px;
-  }
-
-  /* Adjust to better fit content on smaller screens */
+  /* Fill content across the screen */
   .page-section
   {
     flex-direction: column;
@@ -331,37 +319,33 @@ nav a:hover
     justify-content: flex-start;
     width: 100%;
     border-right: 0;
-    border-bottom: solid 5px;
+    border-bottom: solid var(--borderSize);
 
-    /* TODO: Improve standard styling */
+    /* Reset padding for header elements */
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: var(--standardMargin);
   }
 
   .content-container
   {
+    /* Reset values for smaller screen sizes */
     width: 100%;
     margin: 0;
     padding: 0;
-  }
-
-  body
-  {
-    background-color: skyblue;
   }
 }
 
 @media only screen and (max-width: 769px)
 {
+  .banner-text h2
+  {
+    font-size: 24px;
+  }
+
   .content-container.footer
   {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  body
-  {
-    background-color: violet;
   }
 
   .workGridArea
