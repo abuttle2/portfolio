@@ -41,7 +41,6 @@ body
   padding: 0 var(--standardPadding);
   justify-content: flex-end;
   background-color: var(--darkTextBack);
-  /* Fixed  */
   width: 300px;
 }
 
@@ -203,7 +202,7 @@ nav a:hover
 #feature
 {
   grid-area: feature;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/horizeon.png");
 }
 
 #project-2
