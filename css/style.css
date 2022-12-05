@@ -156,9 +156,10 @@ nav a:hover
 {
   display: grid;
 
-  grid-template-rows: 300px 300px 300px;
+  grid-template-rows: 250px 250px 250px 250px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
+    "feature feature"
     "feature feature"
     "project-2 project-3"
     "project-4 project-5";
@@ -242,7 +243,7 @@ nav a:hover
   flex-wrap: wrap;
 }
 
-.content-container a
+.content-container.footer a
 {
   color: black;
   flex-wrap: wrap;
@@ -251,7 +252,7 @@ nav a:hover
   border-bottom: solid black 2px;
 }
 
-.content-container a:hover
+.content-container.footer a:hover
 {
   transform: scale(1.05);
 }
