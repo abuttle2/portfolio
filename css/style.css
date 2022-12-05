@@ -6,6 +6,7 @@
 :root
 {
   /* TODO: Change for IE support */
+  /* TODO: Tidy magic numbers for styling */
   /* Dark Theme */
   --darkNavBar: #121212;
   --darkTextBack: #323232;
@@ -16,7 +17,8 @@ body
 {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -41,7 +43,6 @@ body
   background-color: var(--darkTextBack);
   /* Fixed  */
   width: 300px;
-
 }
 
 #navBar
@@ -52,7 +53,6 @@ body
   width: 100%;
   justify-content: flex-end;
   padding: 0;
-
 }
 
 #navBar a
@@ -133,9 +133,13 @@ p
   width: 200px;
 }
 
+nav a:hover
+{
+  transform: scale(1.05);
+}
+
 .content-container
 {
-
   margin: 0rem 3rem;
   display: flex;
   flex-direction: column;
@@ -150,7 +154,6 @@ p
 
 #workGrid
 {
-
   display: grid;
 
   grid-template-rows: 300px 300px 300px;
@@ -158,8 +161,7 @@ p
   grid-template-areas:
     "feature feature"
     "project-2 project-3"
-    "project-4 project-5"
-  ;
+    "project-4 project-5";
 }
 
 .workGridArea
@@ -171,6 +173,19 @@ p
   cursor: pointer;
   display: grid;
   align-content: end;
+
+  border: 5px solid black;
+  transition: transform 0.2s;
+  /* Animation */
+
+  border-radius: 10px;
+}
+
+.workGridArea:hover
+{
+  transform: scale(1.02);
+  box-shadow: inset 0px 0px 8px rgba(0, 255, 0, 0.5),
+    0 0 15px rgba(0, 255, 0, 0.5);
 }
 
 .heading
@@ -184,7 +199,6 @@ p
   color: white;
   font-size: 18px;
   width: fit-content;
-  /* border-bottom: 5px solid rgba(36, 205, 45, .7); */
 }
 
 #feature
@@ -217,21 +231,8 @@ p
   background-image: url("../images/02-run-buddy.jpg");
 }
 
-.workGridArea
-{
-  border: 5px solid black;
-  transition: transform .2s;
-  /* Animation */
-}
-
-.workGridArea:hover
-{
-  transform: scale(1.02);
-}
-
 .content-container.footer
 {
-  text-decoration: none;
   font-size: larger;
   display: flex;
   flex-direction: row;
@@ -243,8 +244,16 @@ p
 
 .content-container a
 {
+  color: black;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 0 10px;
+  text-decoration: none;
+  border-bottom: solid black 2px;
+}
+
+.content-container a:hover
+{
+  transform: scale(1.05);
 }
 
 .content-container img
@@ -252,7 +261,6 @@ p
   width: 200px;
   height: 200px;
   margin: 0 auto;
-
 }
 
 .photo
@@ -335,17 +343,10 @@ p
     padding: 0;
   }
 
-  p
-  {
-    margin: 0;
-    padding: 0;
-  }
-
   body
   {
     background-color: skyblue;
   }
-
 }
 
 @media only screen and (max-width: 769px)
