@@ -187,7 +187,6 @@ p
   /* border-bottom: 5px solid rgba(36, 205, 45, .7); */
 }
 
-
 #feature
 {
   grid-area: feature;
@@ -246,6 +245,19 @@ p
 {
   flex-wrap: wrap;
   padding: 10px;
+}
+
+.content-container img
+{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+
+}
+
+.photo
+{
+  margin: 1rem auto;
 }
 
 /* Media queries */
