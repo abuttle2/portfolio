@@ -238,7 +238,14 @@ p
   flex-direction: row;
   align-items: center;
   /* Follow page spacing */
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.content-container a
+{
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 /* Media queries */
@@ -285,11 +292,6 @@ p
     font-size: 24px;
   }
 
-  body
-  {
-    background-color: lightblue;
-  }
-
   .a
   {
     font-size: 56px;
@@ -327,4 +329,33 @@ p
     padding: 0;
   }
 
+  body
+  {
+    background-color: skyblue;
+  }
+
+}
+
+@media only screen and (max-width: 769px)
+{
+  .content-container.footer
+  {
+    flex-direction: column;
+  }
+
+  body
+  {
+    background-color: violet;
+  }
+
+  .workGridArea
+  {
+    height: 150px;
+  }
+
+  #workGrid
+  {
+    display: flex;
+    flex-direction: column;
+  }
 }
